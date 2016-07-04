@@ -13,9 +13,7 @@
           VerticalAlignment="Center"
           Margin="0"
           Padding="0">
-        <Game:GameView Width="500"
-                       Height="800"
-                       HorizontalAlignment="Center"
+        <Game:GameView HorizontalAlignment="Center"
                        VerticalAlignment="Center"/>
     </Grid>
 </Page>

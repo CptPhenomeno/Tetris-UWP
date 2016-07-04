@@ -9,11 +9,8 @@
     Loaded="StartGameLoop">
 
     <StackPanel>
-        <Canvas Width="500"
-                Height="800"
-                Name="GameCanvas"
-                Background="SlateGray">
-
+        <MediaElement Name="Korobeiniki" />
+        <Canvas Name="GameCanvas">
         </Canvas>
     </StackPanel>
 </UserControl>

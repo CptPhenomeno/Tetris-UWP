@@ -21,7 +21,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\x86\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS;CODE_ANALYSIS</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
@@ -98,8 +98,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GameView\Block\Block.cs" />
-    <Compile Include="GameView\Block\RectangleBlock.cs" />
+    <Compile Include="GameView\Blocks\Block.cs" />
+    <Compile Include="GameView\Blocks\ImageBlock.cs" />
+    <Compile Include="GameView\Blocks\RectangleBlock.cs" />
     <Compile Include="GameView\GameView.xaml.cs">
       <DependentUpon>GameView.xaml</DependentUpon>
     </Compile>
@@ -117,6 +118,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -125,6 +127,16 @@
     <None Include="Tetris_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\blue_block.png" />
+    <Content Include="Assets\cyan_block.png" />
+    <Content Include="Assets\green_block.png" />
+    <Content Include="Assets\grid_40.png" />
+    <Content Include="Assets\grid_background.png" />
+    <Content Include="Assets\Korobeiniki.mp3" />
+    <Content Include="Assets\orange_block.png" />
+    <Content Include="Assets\purple_block.png" />
+    <Content Include="Assets\red_block.png" />
+    <Content Include="Assets\yellow_block.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

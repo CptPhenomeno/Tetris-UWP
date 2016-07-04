@@ -9,7 +9,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Shapes;
 
-namespace Tetris.GameView.Tetraminoes
+namespace Tetris.GameView.Blocks
 {
     public class RectangleBlock : Block
     {
@@ -39,25 +39,38 @@ namespace Tetris.GameView.Tetraminoes
             rect.SetValue(Canvas.TopProperty, top);
         }
 
-        public override void MoveHorizontally(int dx) 
+        public override void MoveLeft()
         {
-            base.MoveHorizontally(dx);
+            base.MoveLeft();
             rect.SetValue(Canvas.LeftProperty, left);
         }
 
-        public override void MoveVertically(int dy)
+        public override void MoveRight()
         {
-            base.MoveVertically(dy);
+            base.MoveRight();
+            rect.SetValue(Canvas.LeftProperty, left);
+        }
+
+        public override void MoveUp()
+        {
+            base.MoveUp();
             rect.SetValue(Canvas.TopProperty, top);
         }
 
+        public override void MoveDown()
+        {
+            base.MoveDown();
+            rect.SetValue(Canvas.TopProperty, top);
+        }
+        
         public override void DrawBlock(Canvas canvas)
         {
-            //await dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
-            //{
-            //    Canvas canvas = view.GetCanvas();
             canvas.Children.Add(rect);
-            //});
+        }
+
+        public override void DeleteBlock(Canvas canvas)
+        {
+            canvas.Children.Remove(rect);
         }
     }
 }
